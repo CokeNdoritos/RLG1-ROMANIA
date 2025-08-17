@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RLG1 ROMANIA - Liga de Fotbal Roblox</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hidden { display: none; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <!-- Navbar -->
+  <nav class="bg-blue-600 p-4 text-white flex justify-between items-center shadow-lg">
+    <h1 class="font-bold text-xl">⚽ RLG1 ROMANIA</h1>
+    <div class="space-x-4">
+      <button onclick="showSection('clasament')">Clasament</button>
+      <button onclick="showSection('meciuri')">Meciuri</button>
+      <button onclick="showSection('info')">Info</button>
+    </div>
+  </nav>
+
+  <!-- Clasament -->
+  <section id="clasament" class="p-8">
+    <h3 class="text-3xl font-bold mb-6 text-blue-700">🏆 Clasament</h3>
+    <div class="overflow-x-auto">
+      <table class="w-full border border-gray-300 text-center shadow-md rounded-lg">
+        <thead class="bg-blue-100">
+          <tr>
+            <th class="p-3">#</th>
+            <th>Echipa</th>
+            <th>Puncte</th>
+            <th>Golaveraj</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border">
+            <td>1</td>
+            <td class="flex items-center justify-center gap-2 p-2">
+              <img src="cfr.png" alt="CFR" class="h-6"> CFR
+            </td>
+            <td>3</td>
+            <td>+3</td>
+          </tr>
+          <tr class="border">
+            <td>2</td>
+            <td class="flex items-center justify-center gap-2 p-2">
+              <img src="unirea.png" alt="Unirea Dej" class="h-6"> Unirea Dej
+            </td>
+            <td>0</td>
+            <td>-3</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Meciuri -->
+  <section id="meciuri" class="p-8 hidden">
+    <h3 class="text-3xl font-bold mb-6 text-green-700">📅 Meciuri</h3>
+    <div class="bg-white p-4 rounded-lg shadow-md">
+      <p class="flex items-center gap-3">
+        <img src="cfr.png" alt="CFR" class="h-6"> CFR 3 - 0 
+        <img src="unirea.png" alt="Unirea Dej" class="h-6"> Unirea Dej 
+        <span class="text-gray-500">(Masa verde, 17 August 2025)</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Info -->
+  <section id="info" class="p-8 hidden">
+    <h3 class="text-3xl font-bold mb-6 text-purple-700">ℹ️ Info</h3>
+    <div class="bg-white p-6 rounded-xl shadow-md space-y-4 leading-relaxed">
+      <p class="text-lg font-semibold">⚽ RLG1 Romania – cea mai tare ligă de Roblox Football din România!</p>
+      <p>Ești gata să-ți testezi skill-urile și să intri în meciuri pline de adrenalină?
+      Aici, fotbalul prinde viață pe Roblox, cu echipe organizate, comunitate activă și vibe de campionat adevărat!</p>
+
+      <p class="font-bold">👥 Căutăm:</p>
+      <ul class="list-disc ml-6">
+        <li>Jucători hotărâți să facă spectacol pe teren</li>
+        <li>Antrenori care știu ce înseamnă strategie și victorie</li>
+        <li>Arbitri corecți și implicați</li>
+        <li>Ultrași ce aduc atmosfera de stadion în Roblox</li>
+      </ul>
+
+      <p class="font-bold">🔥 De ce să intri?</p>
+      <ul class="list-disc ml-6">
+        <li>Meciuri live și competiții intense</li>
+        <li>Transferuri și evenimente unice</li>
+        <li>O comunitate unită și pasionată de Roblox Football</li>
+      </ul>
+
+      <p class="text-lg font-semibold">👉 Intră acum în RLG1 Romania și fă parte din acțiune:</p>
+      <a href="https://discord.gg/mbQ3QN87r7" target="_blank" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Join Discord</a>
+    </div>
+  </section>
+
+  <!-- Discord Floating Button -->
+  <div class="fixed bottom-6 right-6">
+    <a href="https://discord.gg/mbQ3QN87r7" target="_blank" 
+       class="bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 transition">
+       💬 Discord
+    </a>
+  </div>
+
+  <!-- Script pentru navigație -->
+  <script>
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(s => s.classList.add("hidden"));
+      document.getElementById(id).classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
